@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Page Title</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Header/logo Title */
+.header {
+  padding: 80px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+}
+
+/* Increase the font size of the heading */
+.header h1 {
+  font-size: 40px;
+}
+
+/* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Active/current link */
+.navbar a.active {
+  background-color: #666;
+  color: white;
+}
+
+/* Column container */
+.row {  
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  -ms-flex: 30%; /* IE10 */
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* Main column */
+.main {   
+  -ms-flex: 70%; /* IE10 */
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Programming Paradigms</h1>
+  <h2>An <b>overview</h2>
+  <p> RA1811028010083 <p>
+  
+</div>
+
+<div class="navbar">
+  <a href="#" class="middle">THE FOUR MAJOR DIVISIONS</a>
+</div>
+
+<div class="row">
+  <div class="side">
+    <h2>List of Major Paradigms</h2>
+    <h5>Imperative</h5>
+    <h5>Functional</h5>
+    <h5>Logical</h5>
+    <h5>Object-Oriented</h5>
+    <img src="data:image/png;base64,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" width="253" height="193">
+<img
+src="https://cdn.shortpixel.ai/client/q_lossless,ret_img,w_783/https://www.comakeit.com/blog/wp-content/uploads/2018/03/Functional-Programming-Languages.jpg"  width="253" height="193">
+  </div>
+  <div class="main">
+    <h2>IMPERATIVE</h2>
+    <img
+src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTYwhJKZ139AdSn37WsNQkiSrnX7iYvNwaos5EzuE6tnr5y3Dby"  width="400" height="200">
+    <p>In computer science, imperative programming is a programming paradigm that uses statements that change a program's state. In much the same way that the imperative mood in natural languages expresses commands, an imperative program consists of commands for the computer to perform.</p>
+    <br>
+    <h2>FUNCTIONAL</h2>
+    <img
+    src="https://www.guru99.com/images/1/080118_0618_WhatisFunct1.png"  width="400" height="200">
+    <p>Functional programming (often abbreviated FP) is the process of building software by composing pure functions, avoiding shared state, mutable data, and side-effects. Functional programming is declarative rather than imperative, and application state flows through pure functions<p>
+  </div>
+</div>
+
+ </div>
+  <div class="main">
+    <h2>LOGICAL</h2>
+    <img src="https://qph.fs.quoracdn.net/main-qimg-f24ddf6f37c67c070720b3cd71802666" width="600" height="600">
+    <p>Logic programming is a programming paradigm which is largely based on formal logic. Any program written in a logic programming language is a set of sentences in logical form, expressing facts and rules about some problem domain.</p>
+    <br>
+    <h2>OBJECT ORIENTED</h2>
+    <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190717114649/Object-Oriented-Programming-Concepts.jpg" alt="Trulli" width="400" height="200">
+    <p>Object-oriented programming is a programming paradigm based on the concept of "objects", which can contain data, in the form of fields, and code, in the form of procedures. A feature of objects is an object's procedures that can access and often modify the data fields of the object with which they are associated.<p>
+  </div>
+</div>
+
+<div class="footer">
+  <h4>Reference link to wikipedia for detailed outline of all paradigms</h4>
+  <h5>https://en.wikipedia.org/wiki/Programming_paradigm<h5>
+</div>
+
+</body>
+</html>
